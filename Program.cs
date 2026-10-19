@@ -19,6 +19,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 //commit
+//commit
 
 // Проверка данных из тела запроса -> 400 Bad Request
 static List<string> Validate(Product p)
