@@ -20,6 +20,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 //commit
 //commit
+//commit
 
 // Проверка данных из тела запроса -> 400 Bad Request
 static List<string> Validate(Product p)
