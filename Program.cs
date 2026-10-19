@@ -6,14 +6,19 @@ var builder = WebApplication.CreateBuilder(args);
 // ---- OpenAPI (Swagger) ----
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(o =>
-    o.SwaggerDoc("v1", new() { Title = "Products API", Version = "v1",
-        Description = "REST API интернет-магазина на ASP.NET Core Minimal API" }));
+    o.SwaggerDoc("v1", new()
+    {
+        Title = "Products API",
+        Version = "v1",
+        Description = "REST API интернет-магазина на ASP.NET Core Minimal API"
+    }));
 
 var app = builder.Build();
 
 // Документ OpenAPI: /swagger/v1/swagger.json, интерфейс: /swagger
 app.UseSwagger();
 app.UseSwaggerUI();
+//commit
 
 // Проверка данных из тела запроса -> 400 Bad Request
 static List<string> Validate(Product p)
